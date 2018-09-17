@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#define $ procedure_1
-struct $ { int x; int y; } $(int a, int b) {
-struct $ out = {0};
+struct procedure_1{int x; int y;}
+       procedure_1(int a, int b) {
+struct procedure_1 out = {};
 
   out.x = a + b;
   out.y = a - b;
@@ -10,9 +10,9 @@ struct $ out = {0};
   return out;
 }
 
-#define $ procedure_2
-struct $ { int x; int y; } $(int a, int b) {
-struct $ out = {0};
+struct procedure_2{int x; int y;}
+       procedure_2(int a, int b) {
+struct procedure_2 out = {};
 
   out.x = a * b;
   out.y = a / b;
