@@ -1,8 +1,17 @@
 #include <stdio.h>
 
-struct procedure_1{int x; int y;}
-       procedure_1(int a, int b) {
-struct procedure_1 out = {};
+struct procedureOne {
+  int x;
+  int y;
+};
+
+struct procedureTwo {
+  int z;
+  int w;
+};
+
+struct procedureOne procedureOne(int a, int b) {
+struct procedureOne out = {};
 
   out.x = a + b;
   out.y = a - b;
@@ -10,20 +19,20 @@ struct procedure_1 out = {};
   return out;
 }
 
-struct procedure_2{int x; int y;}
-       procedure_2(int a, int b) {
-struct procedure_2 out = {};
 
-  out.x = a * b;
-  out.y = a / b;
+struct procedureTwo procedureTwo(int a, int b) {
+struct procedureTwo out = {};
+
+  out.z = a * b;
+  out.w = a / b;
 
   return out;
 }
 
 int main() {
-  struct procedure_1 a = procedure_1(40, 2);
-  struct procedure_2 b = procedure_2(100, 8);
+  struct procedureOne a = procedureOne(40, 2);
+  struct procedureTwo b = procedureTwo(100, 8);
 
   printf("a.x: %d, a.y: %d\n", a.x, a.y);
-  printf("b.x: %d, b.y: %d\n", b.x, b.y);
+  printf("b.z: %d, b.w: %d\n", b.z, b.w);
 }
